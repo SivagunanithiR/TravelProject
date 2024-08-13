@@ -1,0 +1,82 @@
+:root {
+    --primaryColor: hsl(14, 90%, 53%);
+    --primaryColorLight: hsl(14, 96%, 91%);
+    --bgColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyColor: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+  }
+  
+  .portfolio {
+    padding: 2rem;
+    .secContainer {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .leftContent {
+      grid-column: span 2;
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: var(--h1FontSize);
+      font-weight: 700;
+    }
+    
+    p {
+      font-size: var(--normalFontSize);
+      color: var(--greyColor);
+      margin-top: 0.5rem;
+    }
+    
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .singlePortfolio {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .iconDiv img {
+      height: 60px;
+      width: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  
+    .infor h4 {
+      padding-bottom: 0.5rem;
+      font-size: var(--h2FontSize);
+      font-weight: 600;
+    }
+  
+    .infor p {
+      font-size: var(--smallFontSize);
+      color: var(--greyColor);
+    }
+  
+    .rightContent img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+  }

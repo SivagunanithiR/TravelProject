@@ -1,0 +1,145 @@
+:root {
+    --primaryColor: hsl(14, 90%, 53%);
+    --primaryColorLight: hsl(14, 96%, 91%);
+    --bgColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%, 85%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyColor: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 0.5rem;
+}
+
+.question {
+    background-color: var(--bgColor);
+    padding: 2rem 1rem; 
+    
+    .secHeading {
+        text-align: center;
+        margin-bottom: 2rem; 
+
+        h3 {
+            font-size: var(--h1FontSize);
+            color: var(--blackColor);
+            margin-bottom: 0.5rem; /* Add margin for spacing */
+        }
+    }
+
+    .secContainer {
+        display: grid;
+        gap: 2rem; 
+        
+        .accordion {
+            display: grid;
+            gap: 1rem; /* Adjust gap for spacing */
+        }
+
+        .form {
+            background-color: var(--whiteColor);
+            padding: 2rem; 
+            border-radius: var(--borderRadius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+            .secHeading {
+                margin-bottom: 1.5rem; 
+
+                h4 {
+                    font-size: var(--h2FontSize);
+                    color: var(--blackColor);
+                    margin-bottom: 0.5rem; /* Add margin for spacing */
+                }
+
+                p {
+                    color: var(--greyColor);
+                    font-size: var(--smallFontSize);
+                    margin-bottom: 1rem; /* Add margin for spacing */
+                }
+            }
+
+            .formContent {
+                display: grid;
+                gap: 1rem; /* Adjust gap for spacing */
+
+                input[type='email'],
+                textarea {
+                    padding: 0.75rem; 
+                    border: 1px solid var(--greyColor);
+                    border-radius: var(--borderRadius);
+                    font-size: var(--normalFontSize);
+                    width: 100%; /* Ensure full width */
+                }
+
+                textarea {
+                    resize: vertical;
+                    min-height: 100px; 
+                }
+
+                button.btn {
+                    padding: 0.75rem 1.5rem; 
+                    border: none;
+                    border-radius: var(--borderRadius);
+                    background-color: var(--primaryColor);
+                    color: var(--whiteColor);
+                    font-size: var(--normalFontSize);
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: var(--primaryColorLight);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accordionContainer {
+    .title {
+        font-size: var(--normalFontSize);
+        align-items: center;
+        padding: 1rem;
+        border-radius: var(--borderRadius);
+        background: var(--cardColor);
+        cursor: pointer;
+        display: flex; 
+        justify-content: space-between; 
+    }
+
+    .title .icon {
+        font-size: 1.2rem;
+        color: var(--blackColor);
+    }
+
+    .description {
+        font-size: var(--smallestFontSize);
+        display: none;
+        align-items: center;
+        line-height: 1.5;
+        white-space: pre-line;
+        transition: all 0.3s ease-in-out;
+        padding: 1rem;
+        background: var(--inputColor);
+        border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+        color: var(--blackColor);
+    }
+
+    .description.show {
+        display: block;
+        height: auto;
+        opacity: 1;
+    }
+
+    .activeTitle {
+        background: var(--primaryColorLight);
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    }
+}
